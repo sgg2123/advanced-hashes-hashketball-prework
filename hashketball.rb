@@ -136,6 +136,25 @@ def num_points_scored(player_name)
   end
 end
 
+def num_points_scored(player_name)
+  ans = 0
+  players = game_hash.map do |_, team_hash|
+    team_hash[:players]
+  end  
+  players
+  players.each do |player_hash|
+    if player_hash[:name] == player_name
+      ans += data[:points]
+    end
+  
+
+  end
+  ans
+end
+
+
+num_points_scored("Jeff Adrein")
+
 def shoe_size(player_name)
 end
 
