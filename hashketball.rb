@@ -142,7 +142,6 @@ end
 
 
 
-num_points_scored("Jeff Adrein")
 
 def shoe_size(player_name)
 end
