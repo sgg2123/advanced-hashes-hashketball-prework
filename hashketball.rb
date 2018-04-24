@@ -127,15 +127,18 @@ def game_hash
 end
 
 def num_points_scored(player_name)
-  players = game_hash.map do |_, team_data|
-    team_data[:players]
-    name = players.find do |player|
-      player[:name] == player_name
-      name[:points]
+  ans = 0
+  result = game_hash.map do |_, team_hash|
+    team_hash[:players]
+  end 
+  result = result.flatten
+  result.each do |player_hash|
+    if player_hash[:name] == player_name
+      ans += player_hash[:points]
     end
   end
+  ans
 end
-
 
 
 
